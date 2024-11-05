@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: purple;
+    background-image: url(../media/O3Bxs16.gif);
+}
+.container {
+    background-color: #dda1a1;
+    width: 100vw;
+    height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.text {
+    height: 200px;
+    width: 1000px;
+    background: url(../media/original.gif);
+    background-size: 650px 200px;
+    font-size: 120px;
+    font-family: nintysfont, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, sans-serif;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.text2 {
+    height: 200px;
+    width: 1000px;
+    background: url(../media/original.gif);
+    background-size: 650px 200px;
+    font-size: 100px;
+    font-family: nike, nintysfont, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, sans-serif;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.displayclm {
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px;
+    justify-content: center;
+}
+.im-size {
+    width: 300px;
+    height: 300px;
+    animation-name: dizzy;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+.midnav {
+    font-family: nintysfont;
+    font-size: 5vw;
+    font-size: 5vh;
+    text-align: center;
+    justify-items: center;
+    justify-items: center;
+
+}
+.btn-group {
+    display: flex;
+    font-family: nintysfont;
+    font-size: 10vw;
+    font-size: 10vh;
+    text-align: center;
+    justify-self: center;
+    /* justify-items: center; */
+}
+.btn-secondary {
+    background: linear-gradient(to right, rgb(138, 43, 226), rgb(221, 161, 161)) !important;
+
+}
+a:link {
+    text-decoration: none;
+    color: black;
+}
+a:visited {
+    text-decoration: none;
+    color: rgb(138, 43, 226);
+}
+a:hover {
+    text-decoration: none;
+    color: rgb(221, 161, 161);
+}
+a:active {
+    text-decoration: none;
+    color: aliceblue;
+}
+@font-face {
+    font-family: nintysfont;
+    src:url(../media/Black\ Way.otf)
+}
+@font-face {
+    font-family: nike;
+    src: url(../media/Nike\ 90.ttf);
+}
+@keyframes dizzy {
+    0%{
+        border-radius: 50%;
+    }
+    25%{
+        scale: 1;
+    }
+    50%{
+        scale: 2;
+    }
+    75%{
+        scale: 3;
+    }
+    100%{
+        transform: rotate(360deg);
+        border-radius: 50%;
+    }
+}

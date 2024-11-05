@@ -1,0 +1,59 @@
+.bb {
+    /* box-sizing: border-box; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* height: 100%; */
+    /* width: 100%; */
+    justify-content: center;
+    gap: 100px;
+    animation-name: dizzy;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+
+}
+.bd {
+    box-sizing: border-box;
+    height: 500px;
+    width: 500px;
+    /* justify-content: center; */
+    /* background-color: black; */
+    background: linear-gradient(to right, rgb(138, 43, 226), rgb(221, 161, 161)) !important;
+
+    text-align: center;
+    padding-top: 35%;
+    margin: auto;
+    border-radius: 30%;
+    animation-name: dizzy;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+.bd h1 {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    animation-name: dizzy;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+
+}
+@keyframes dizzy {
+    0%{
+        border-radius: 50%;
+    }
+    25%{
+        scale: 1;
+    }
+    50%{
+        scale: 2;
+    }
+    75%{
+        scale: 3;
+    }
+    100%{
+        transform: rotate(360deg);
+        border-radius: 50%;
+    }
+}
