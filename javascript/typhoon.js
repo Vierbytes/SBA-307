@@ -1,5 +1,5 @@
 // import {API_KEY} from './sensitive.js'
-const API_KEY = '57583ad7ccd31b780853bd40faba2cad'
+const API_KEY = 'ca3ebb82589d476d1c4b6b3bb0ca334a'
 
 window.addEventListener('load', function () {
 
@@ -43,23 +43,24 @@ window.addEventListener('load', function () {
         const lon = place.geometry.location.lng();
         const units = 'imperial';
         // The variables of lat and lng are passed from the Google Places API to the Open Weather Maps: Current Weather Data API to return specified data points.
-        fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=${units}`).then(function (response) {
+        fetch(`https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=${units}`).then(function (response) {
             return response.json();
         }).then(function (data) {
-            console.log(data);
+            console.dir(data, { depth: null });
+            console.table(data);
             console.log(`Your request for ${place.name} has completed successfully.`)
-            let temp = data.main.temp;
-            let loca = data.name;
-            let icon = data.weather[0].icon;
-            let desc = data.weather[0].description;
+            let temp = data.current.temp;
+            let loca = place.name;
+            let icon = data.current.weather[0].icon;
+            let desc = data.current.weather[0].description;
             document.getElementById("locationHeader").innerHTML = (loca);
             document.getElementById("temp").innerHTML = (`${temp} °`);
             document.getElementById("dynamicIcon").src = `http://openweathermap.org/img/wn/${icon}@2x.png`;
             document.getElementById("description").innerHTML = (desc);
         }).then(function () {
             // Fetch to another Open Weather Maps API: One Call. Used to get daily weather data.
-            fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=${units}`).then(function (response) {
-                return response.json()
+            fetch(`https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=${units}`).then(function (response) {
+                return response.json();
             }).then(function (data) {
                 console.log(data);
                 let monday = data.daily[0].temp.day
