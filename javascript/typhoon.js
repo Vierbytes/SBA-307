@@ -2,37 +2,7 @@
 const API_KEY = 'ca3ebb82589d476d1c4b6b3bb0ca334a'
 
 window.addEventListener('load', function () {
-
-    let audio = document.createElement('audio');
-    audio.src = '../media/LilBabyCatchTheSun.mp3';
-    audio.loop = true;
-    audio.style.display = 'none'; // Hide the audio element
-
-    function playAudio() {
-        audio.play();
-    }
-    function pauseAudio() {
-        audio.pause();
-    }
-    // Initial state (page is visible)
-    document.addEventListener('DOMContentLoaded', function () {
-        playAudio();
-    });
-    // Visibility change event listener
-    document.addEventListener('visibilitychange', function () {
-        if (document.hidden) {
-            playAudio();
-        } else {
-            playAudio();
-        }
-    });
-    // Focus/blur events for tab switching
-    window.addEventListener('focus', function () {
-        playAudio();
-    });
-    window.addEventListener('blur', function () {
-        playAudio();
-    });
+    
     // Autocomplete using the Google Places API to pass in the Coordinate of the selected as variables lat and lng.
     const searchElement = document.querySelector('[data-citySearch]')
     const searchBox = new google.maps.places.SearchBox(searchElement)
