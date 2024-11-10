@@ -11,7 +11,10 @@ body {
         rgba(255, 97, 35, 0.3)
     );
 }
-
+.im-size {
+    width: 150px;
+    height: 150px;
+}
 #citySearchBox {
     display: flex;
     width: 70vw;
@@ -79,7 +82,7 @@ body {
 }
 
 #temp {
-    background: linear-gradient(to right, rgba(83, 158, 156), rgba(134, 88, 151));
+    background: linear-gradient(to right, #539e9c, #865897);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
